@@ -106,22 +106,16 @@ public class Day01UniversalArrays {
             { 123, -7, 0, 1, 7 }
         };
         
+        
+        
+        // OUTPUT:
+        System.out.println("************************* START **********************");
+        
         System.out.println("----- NORMAL PRINT: -----");
         printArray(data2d);
         
         System.out.println("----- SMART PRINT: -----");
         printArraySmart(data2d);
-        
-        // OUTPUT:
-        System.out.println("************************* START **********************");
-        
-        
-
-        
-        
-        
-        
-        
         
         System.out.println("************************** END ***********************");
 
