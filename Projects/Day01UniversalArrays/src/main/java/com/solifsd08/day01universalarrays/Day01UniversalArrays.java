@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
-
 package com.solifsd08.day01universalarrays;
 
-/**
- *
- * @author solil
- */
 public class Day01UniversalArrays {
     
     //////////////////////////////////////////////////// STATIC UTILITY METHODS
@@ -109,7 +101,7 @@ public class Day01UniversalArrays {
         
         
         // OUTPUT:
-        System.out.println("************************* START **********************");
+        System.out.println("********************* START ******************");
         
         System.out.println("----- NORMAL PRINT: -----");
         printArray(data2d);
@@ -117,7 +109,7 @@ public class Day01UniversalArrays {
         System.out.println("----- SMART PRINT: -----");
         printArraySmart(data2d);
         
-        System.out.println("************************** END ***********************");
+        System.out.println("********************** END *******************");
 
     }
 }
