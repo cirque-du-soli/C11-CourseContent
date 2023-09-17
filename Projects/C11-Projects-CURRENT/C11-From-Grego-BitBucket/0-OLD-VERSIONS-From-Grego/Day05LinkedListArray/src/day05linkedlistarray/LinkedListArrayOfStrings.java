@@ -1,17 +1,17 @@
 package day05linkedlistarray;
 
-public class LinkedListArray<T> {
+public class LinkedListArrayOfStrings {
 
     private class Container {
 
         Container next;
-        T value;
+        String value;
     }
 
     private Container start, end;
     private int size;
 
-    public void add(T value) { // O(1) - append
+    public void add(String value) { // O(1) - append
         Container newCont = new Container();
         newCont.value = value;
         if (size == 0) { // list empty - special case
@@ -24,7 +24,7 @@ public class LinkedListArray<T> {
         }
     }
 
-    public T get(int index) {
+    public String get(int index) {
         if (index < 0 || index >= size) {
             throw new ArrayIndexOutOfBoundsException();
         }
@@ -35,7 +35,7 @@ public class LinkedListArray<T> {
         return current.value;
     }
 
-    public void insertValueAtIndex(T value, int index) {
+    public void insertValueAtIndex(String value, int index) {
         if (index < 0 || index > size) {
             throw new ArrayIndexOutOfBoundsException();
         }
@@ -60,14 +60,14 @@ public class LinkedListArray<T> {
         size++;
     }
 
-    public void replaceValueAtIndex(T value, int index) {
+    public void replaceValueAtIndex(String value, int index) {
         throw new RuntimeException("Not implemented yet");
     } // put
 
     public void deleteRange(int startIndex, int count) { // ADVANCED
         throw new RuntimeException("Not implemented yet");
     }
-
+    
     public void deleteByIndex(int index) {
         if (index < 0 || index >= size) {
             throw new ArrayIndexOutOfBoundsException();
@@ -94,7 +94,7 @@ public class LinkedListArray<T> {
         }
     }
 
-    public boolean deleteByValue(T value) { // delete first value found
+    public boolean deleteByValue(String value) { // delete first value found
         // ineffective and "lazy" way of implementing it
         int count = 0;
         Container current = start;
@@ -120,7 +120,7 @@ public class LinkedListArray<T> {
         // while (current != null) {
         for (int i = 0; i < size; i++) {
             sb.append(i == 0 ? "" : ",");
-            sb.append(current.value.toString());
+            sb.append(current.value);
             current = current.next;
         }
         sb.append("]");
@@ -133,17 +133,14 @@ public class LinkedListArray<T> {
         for (Container current = start; current != null; current = current.next) {
             sb.append(isFirst ? "" : ",");
             isFirst = false;
-            sb.append(current.value.toString());
+            sb.append(current.value);
         }
         sb.append("]");
         return sb.toString();
     }
 
-    public T[] toArray(T[] template) { // could be used for Unit testing
-        // T[] result = new T[size]; // this won't compile
-        // T[] result = (T[]) new Object[size]; // will compiler but then crash at runtime
-        // T[] result = (T[]) Array.newInstance(template.getClass(), size); // fails on storing value into the array
-        T[] result = (T[]) java.lang.reflect.Array.newInstance(template.getClass().getComponentType(), size);
+    public String[] toArray() { // could be used for Unit testing
+        String [] result = new String[size];
         int i = 0;
         for (Container current = start; current != null; current = current.next) {
             result[i++] = current.value;
@@ -151,5 +148,4 @@ public class LinkedListArray<T> {
         assert (i == size); // internal sanity check
         return result;
     }
-
 }

@@ -1,9 +1,8 @@
 package day05linkedlistarray;
 
 public class LinkedListArray<T> {
-
+    
     private class Container {
-
         Container next;
         T value;
     }
@@ -67,7 +66,7 @@ public class LinkedListArray<T> {
     public void deleteRange(int startIndex, int count) { // ADVANCED
         throw new RuntimeException("Not implemented yet");
     }
-
+    
     public void deleteByIndex(int index) {
         if (index < 0 || index >= size) {
             throw new ArrayIndexOutOfBoundsException();
@@ -143,7 +142,7 @@ public class LinkedListArray<T> {
         // T[] result = new T[size]; // this won't compile
         // T[] result = (T[]) new Object[size]; // will compiler but then crash at runtime
         // T[] result = (T[]) Array.newInstance(template.getClass(), size); // fails on storing value into the array
-        T[] result = (T[]) java.lang.reflect.Array.newInstance(template.getClass().getComponentType(), size);
+        T[] result = (T[])java.lang.reflect.Array.newInstance(template.getClass().getComponentType(), size);
         int i = 0;
         for (Container current = start; current != null; current = current.next) {
             result[i++] = current.value;
