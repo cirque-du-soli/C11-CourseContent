@@ -69,15 +69,18 @@ public class MainWindow extends JFrame {
             // for line 0, we don't change the length
             
             // figure out destination x, y:
-            
+            destY = canvasW / (3 * i);
             
             g.drawLine(brushX, brushY, destX, destY);
           
+            // start and end for 2nd part
             
+            brushY = canvasW / (3 * i)
             
             
             // after drawing each level y, add a stepY at the bottom (move down a line)
             brushY += levelBuff;
+            brushX = windowBuff;
         }
 
     }
