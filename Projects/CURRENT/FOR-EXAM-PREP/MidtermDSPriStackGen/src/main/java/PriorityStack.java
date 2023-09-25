@@ -542,7 +542,7 @@ public class PriorityStack<T> {
         // return reversed; // most returns disappear into the abyss, except the last one
         
     }
-*/
+
     
     
       
@@ -561,6 +561,6 @@ public class PriorityStack<T> {
 
         return reversed;
     }
-    
+    */
 
 }

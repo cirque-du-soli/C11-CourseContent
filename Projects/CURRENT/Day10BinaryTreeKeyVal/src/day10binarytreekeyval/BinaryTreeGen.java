@@ -146,7 +146,7 @@ public class BinaryTreeGen<K extends Comparable, V> implements Iterable<Pair<K,V
     
     // return pairs of keys and values from smallest to largest (alphabetically)
     Pair<K,V>[] getPairsInOrder() {
-        Pair<K,V> []pairArrayTemplate = new Pair[0]; // ???
+        Pair<K,V> [] pairArrayTemplate = new Pair[0]; // ???
         // resultKeysValuesArray = new Pair<K,V>[nodesCount];
         resultKeysValuesArray = (Pair<K,V>[])java.lang.reflect.Array.newInstance(pairArrayTemplate.getClass().getComponentType(), nodesCount);
         resultKeysIndex = 0;

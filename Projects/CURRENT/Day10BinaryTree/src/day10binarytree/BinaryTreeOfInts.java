@@ -33,6 +33,7 @@ public class BinaryTreeOfInts implements Iterable<Integer> {
 
     // throws exception if put attempts to insert value that already exists (a duplicate)
     public void put(int value) throws IllegalArgumentException {
+        
         if (root == null) { // special case if tree is empty
             NodeOfInt newNode = new NodeOfInt();
             newNode.value = value;
@@ -40,6 +41,7 @@ public class BinaryTreeOfInts implements Iterable<Integer> {
             nodesCount++;
             return;
         }
+        
         NodeOfInt currNode = root;
         while (true) {
             if (currNode.value == value) {

@@ -10,7 +10,7 @@ class PrintingVisitor implements VisitorInt<BinaryTreeOfIntsVisitable.NodeOfInt>
 public class Day10BinaryTree {
 
     public static void main(String[] args) {
-        
+         
         BinaryTreeOfIntsVisitable tree = new BinaryTreeOfIntsVisitable();
         int [] vals = { 3, 9, 1, 5, 11, 2};
         for (int n : vals ) {
@@ -48,7 +48,9 @@ public class Day10BinaryTree {
         }
         for (int i : tree) {
             System.out.println("Val " + i);
-        } */
+        } 
+        
+        */
     }
     
 }

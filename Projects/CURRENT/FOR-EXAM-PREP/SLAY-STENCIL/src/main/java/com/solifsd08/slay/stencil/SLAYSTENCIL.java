@@ -25,7 +25,10 @@ public class SLAYSTENCIL {
         // NewJFrame.runWindowNewJFrame();
         
         // fractals
-        FractalFun.setupTheWindow();
+        // FractalFun.setupTheWindow();
+        
+        // GUI
+        MegaGUI.runMegaGUI();
         
         
     }

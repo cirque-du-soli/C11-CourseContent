@@ -34,8 +34,6 @@ public class FractalFun extends JFrame {
         
         setTitle("What a nice looking window to draw in!!");
         DrawingArea drawingArea = new DrawingArea();
-        
-        System.out.println("WOWOWOWOWOWO " + drawingArea.isDoubleBuffered());
         add("Center", drawingArea);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null); // center on screen

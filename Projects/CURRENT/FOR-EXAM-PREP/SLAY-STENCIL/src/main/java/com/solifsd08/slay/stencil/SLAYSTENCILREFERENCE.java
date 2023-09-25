@@ -481,6 +481,50 @@ public class SLAYSTENCILREFERENCE {
         System.out.println(car);
     }
     */
+    
+    
+    
+    
+    
+    
+    
+    ////////////////////////////////////////////////////////////////////////////
+    /////////////////////////////////////////////////////// Iterable & Iterator
+    ////////////////////////////////////////////////////////////////////////////
+    /*    
+
+    //////////////////////////////////////////////// 1. Integer structure example
+    // BinaryTreeOfInts
+    public class BinaryTreeOfInts implements Iterable<Integer> {
+
+        // THIS GOES IN THE DATASTRUCTURE'S CLASS
+        @Override
+        public Iterator<Integer> iterator() {
+            return new Iterator<Integer>() {
+
+                int [] data = getValuesInOrder(); // MUST USE "get all vals" method!!
+                int nextItemIndex = 0;
+
+                @Override
+                public boolean hasNext() {
+                    return (nextItemIndex < data.length);
+                }
+
+                @Override
+                public Integer next() {
+                    return data[nextItemIndex++];
+                }
+            };
+        }
+    
+    
+    
+    
+    
+    
+    
+    
+    */
 
 
 
